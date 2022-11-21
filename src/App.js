@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import express from 'express';
+import path from 'path'
 
-export default App;
+const app = express();
+
+app.set('view engin', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+
+app.get('/', (req, res) => {
+  res.render('home')
+})
+
+app.listen(3000, () => {
+  console.log('Serving on port 3000')
+
+})
