@@ -29,7 +29,7 @@ function Register() {
     return (
         <div className="authentication">
             <div className="authentication-form card p-3">
-                <h1 className="card-title">Furry Vet Appointment Platform</h1>
+                <h1 className="card-title">E-Dental Appointment Platform</h1>
                 <Form layout="vertical" onFinish={onFinish}>
                     <Form.Item label="Name" name="name">
                         <Input placeholder="Name" />
