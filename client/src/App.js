@@ -54,6 +54,14 @@ function App() {
           }
         />
         <Route
+          path="/guest"
+          element={
+            <PublicRoute>
+              <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
           path="/apply-doctor"
           element={
             <ProtectedRoute>

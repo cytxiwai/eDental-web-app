@@ -25,6 +25,18 @@ function Layout({ children }) {
       icon: "ri-hospital-line",
     }
   ];
+  const guestMenu = [
+      {
+        name: "Guest Home",
+        path: "/guest",
+        icon: "ri-home-4-line",
+      },
+      {
+        name: "Login for More Features",
+        path: "/register",
+         icon: "ri-key-2-line ",
+      }
+    ];
   const doctorMenu = [
     {
       name: "Home",
@@ -65,8 +77,8 @@ function Layout({ children }) {
     },
   ];
 
-  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
-  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
+  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : user?._id? userMenu : guestMenu;
+  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : user?._id? "User" : "Guest";
   return (
     <div className="main">
       <div className="d-flex layout">
