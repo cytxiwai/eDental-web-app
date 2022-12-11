@@ -52,7 +52,7 @@ router.post("/login", async (req, res) => {
       });
       res
           .status(200)
-          .send({ message: "Login successful", success: true, data: token });
+          .send({ message: "Login successful", success: true, token });
     }
   } catch (error) {
     console.log(error);

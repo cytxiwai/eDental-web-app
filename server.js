@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 //select port
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 
 app.get("/", (req, res) => res.send("Hello World!"));

@@ -90,7 +90,7 @@ function DoctorForm({ onFinish, initialValues }) {
             name="experience"
             rule={[{ required: true }]}
           >
-            <Input placeholder="Experience" />
+            <Input placeholder="Experience" type='number'/>
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
@@ -100,7 +100,7 @@ function DoctorForm({ onFinish, initialValues }) {
             name="feePerConsultation"
             rule={[{ required: true }]}
           >
-            <Input placeholder="Fee Per Consultation" />
+            <Input placeholder="Fee Per Consultation" type='number'/>
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
