@@ -20,7 +20,7 @@ function Layout({ children }) {
       icon: "ri-file-copy-2-line",
     },
     {
-      name: "Apply Vet",
+      name: "Apply Dentist Account",
       path: "/apply-doctor",
       icon: "ri-hospital-line",
     }
@@ -54,7 +54,7 @@ function Layout({ children }) {
       icon: "ri-user-line",
     },
     {
-      name: "Vets",
+      name: "Dentists",
       path: "/admin/doctorslist",
       icon: "ri-user-star-line",
     },
