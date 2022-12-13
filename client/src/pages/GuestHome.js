@@ -34,7 +34,7 @@ function GuestHome() {
     <Layout>
         <Row>
             <div>
-                <h6 className="mb-3"> Thank you for using the eDental website to make a dentist appointment. To provide a better service, We required all users log in to get access to the appointment service. Please click the "Register/Login" button on the left and follow the instructions to finish the login process.</h6>
+                <h6 className="mb-3"> Thank you for using the eDental website to make a dentist appointment. To provide a better service, We required all users log in to get access to the detail dentists information and appointment service. Please click the "Register/Login" button on the left and follow the instructions to finish the login process.</h6>
            </div>
         </Row>
       <Row>

@@ -73,7 +73,7 @@ function BookAppointment() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/user/check-booking-avilability",
+                "/api/user/check-booking-availability",
                 {
                     doctorId: params.doctorId,
                     date: date,
@@ -87,6 +87,7 @@ function BookAppointment() {
             );
             dispatch(hideLoading());
             if (response.data.success) {
+            console.log(params.doctorId)
                 toast.success(response.data.message);
                 setIsAvailable(true);
             } else {

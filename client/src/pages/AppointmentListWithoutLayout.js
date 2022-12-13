@@ -4,10 +4,11 @@ import Layout from "../components/Layout";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { Table } from "antd";
+import {Link} from "react-router-dom"
+import { Table, Button } from "antd";
 import moment from "moment";
 
-function Appointments() {
+function AppointmentsList() {
     const [appointments, setAppointments] = useState([]);
     const dispatch = useDispatch();
     const getAppointmentsData = async () => {
@@ -61,16 +62,25 @@ function Appointments() {
         {
             title: "Status",
             dataIndex: "status",
+        },
+        {
+            title:"Doctor Profile",
+            dataIndex: "name",
+            render:(text, record) => (
+            <button className="primary-button">{record.doctorInfo.firstName} {record.doctorInfo.lastName}</button>
+            ),
         }
     ];
     useEffect(() => {
         getAppointmentsData();
     }, []);
-    return  <Layout>
+    return (
+    <>
         <h1 className="page-title">Appointments</h1>
         <hr />
         <Table columns={columns} dataSource={appointments} />
-    </Layout>
+        </>
+)
 }
 
-export default Appointments;
+export default AppointmentsList;

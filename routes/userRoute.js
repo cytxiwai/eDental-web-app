@@ -83,6 +83,40 @@ router.post("/get-user-info-by-id", authMiddleware, async (req, res) => {
   }
 });
 
+router.post("/get-user-info-by-user-id", authMiddleware, async (req, res) => {
+  try {
+    const user = await User.findOne({ userId: req.body.userId });
+    res.status(200).send({
+      success: true,
+      message: "Doctor info fetched successfully",
+      data: user,
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .send({ message: "Error getting doctor info", success: false, error });
+  }
+});
+
+router.post("/update-user-profile", authMiddleware, async (req, res) => {
+  try {
+    const user = await User.findOneAndUpdate(
+      { userId: req.body.userId },
+      req.body
+    );
+    res.status(200).send({
+      success: true,
+      message: "User profile updated successfully",
+      data: user,
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .send({ message: "Error getting user info", success: false, error });
+  }
+});
+
+
 router.post("/apply-doctor-account", authMiddleware, async (req, res) => {
   try {
     const newdoctor = new Doctor({ ...req.body, status: "pending" });
@@ -202,13 +236,13 @@ router.get("/guest-get-all-approved-doctors", async (req, res) => {
 
 router.post("/book-appointment", authMiddleware, async (req, res) => {
   try {
-    // console.log(req.body)
+    //console.log("1")
     req.body.status = "pending";
 
     req.body.date = moment(req.body.date, "MM-DD-YYYY").toISOString();
     req.body.time = moment(req.body.time, "HH:mm").toISOString();
     const newAppointment = new Appointment(req.body);
-    // console.log(req.body);
+    console.log(req.body.date);
 
     await newAppointment.save();
     //pushing notification to doctor based on his userid
@@ -230,11 +264,12 @@ router.post("/book-appointment", authMiddleware, async (req, res) => {
       message: "Error booking appointment",
       success: false,
       error,
+      //console.log(error)
     });
   }
 });
 
-router.post("/check-booking-avilability", authMiddleware, async (req, res) => {
+router.post("/check-booking-availability", authMiddleware, async (req, res) => {
   try {
     const date = moment(req.body.date, "MM-DD-YYYY").toISOString();
     const fromTime = moment(req.body.time, "HH:mm")

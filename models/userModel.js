@@ -10,6 +10,22 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    medicalHistory:{
+        type:String,
+        default: "",
+    },
+    age:{
+        type:Number,
+        required:true,
+    },
+    phoneNumber:{
+        type:Number,
+        required: false,
+    },
+    address:{
+        type:String,
+        default: "",
+    },
     password: {
       type: String,
       required: true,
