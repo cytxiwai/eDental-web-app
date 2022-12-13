@@ -49,7 +49,7 @@ function Login() {
                     <Button
                         className="primary-button my-2 full-width-button">
                         <Link to="/guest" className="mt-2">
-                    GUEST LOGIN</Link></Button>
+                    GUEST PORTAL</Link></Button>
 
                     <Link to="/register" className="anchor mt-2">
                         CLICK HERE TO REGISTER

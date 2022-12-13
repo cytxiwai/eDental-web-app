@@ -32,7 +32,7 @@ function Layout({ children }) {
         icon: "ri-home-4-line",
       },
       {
-        name: "Login for More Features",
+        name: "Register/Login",
         path: "/register",
          icon: "ri-key-2-line ",
       }
