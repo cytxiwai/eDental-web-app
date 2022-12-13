@@ -182,6 +182,24 @@ router.get("/get-all-approved-doctors", authMiddleware, async (req, res) => {
   }
 });
 
+router.get("/guest-get-all-approved-doctors", async (req, res) => {
+  try {
+    const doctors = await Doctor.find({ status: "approved" });
+    res.status(200).send({
+      message: "Doctors fetched successfully",
+      success: true,
+      data: doctors,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      message: "Error applying doctor account",
+      success: false,
+      error,
+    });
+  }
+});
+
 router.post("/book-appointment", authMiddleware, async (req, res) => {
   try {
     // console.log(req.body)

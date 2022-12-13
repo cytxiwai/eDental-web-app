@@ -17,6 +17,7 @@ import BookAppointment from "./pages/BookAppointment";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import GuestHome from "./pages/GuestHome";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -57,7 +58,7 @@ function App() {
           path="/guest"
           element={
             <PublicRoute>
-              <Home />
+              <GuestHome />
             </PublicRoute>
           }
         />
