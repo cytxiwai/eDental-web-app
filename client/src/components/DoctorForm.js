@@ -52,6 +52,16 @@ function DoctorForm({ onFinish, initialValues }) {
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
+            label="Email"
+            name="email"
+            rule={[{ required: true }]}
+          >
+            <Input placeholder="Email" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            required
             label="Website"
             name="website"
             rule={[{ required: true }]}
@@ -90,7 +100,7 @@ function DoctorForm({ onFinish, initialValues }) {
             name="experience"
             rule={[{ required: true }]}
           >
-            <Input placeholder="Experience" type='number'/>
+            <Input placeholder="Experience" type='number' />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
@@ -100,7 +110,7 @@ function DoctorForm({ onFinish, initialValues }) {
             name="feePerConsultation"
             rule={[{ required: true }]}
           >
-            <Input placeholder="Fee Per Consultation" type='number'/>
+            <Input placeholder="Fee Per Consultation" type='number' />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>

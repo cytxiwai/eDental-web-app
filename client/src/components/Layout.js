@@ -26,17 +26,17 @@ function Layout({ children }) {
     }
   ];
   const guestMenu = [
-      {
-        name: "Guest Home",
-        path: "/",
-        icon: "ri-home-4-line",
-      },
-      {
-        name: "Register/Login",
-        path: "/login",
-         icon: "ri-key-2-line ",
-      }
-    ];
+    {
+      name: "Guest Home",
+      path: "/",
+      icon: "ri-home-4-line",
+    },
+    {
+      name: "Register/Login",
+      path: "/login",
+      icon: "ri-key-2-line ",
+    }
+  ];
   const doctorMenu = [
     {
       name: "Home",
@@ -77,16 +77,16 @@ function Layout({ children }) {
     },
   ];
 
-  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : user?._id? userMenu : guestMenu;
-  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : user?._id? "User" : "Guest";
+  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : user?._id ? userMenu : guestMenu;
+  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : user?._id ? "User" : "Guest";
   return (
     <div className="main">
       <div className="d-flex layout">
         <div className="sidebar">
           <div className="sidebar-header">
 
-            {/*<h1 className="logo">Furry Vet</h1>*/}
-            <img className="logo-img logo" src={require("../image/FVLogo.png")} width={100} alt="logo"/>
+            {/*<h1 className="logo">eDental</h1>*/}
+            <img className="logo-img logo" src={require("../image/FVLogo.png")} width={100} alt="logo" />
             <h1 className="role">{role}</h1>
           </div>
 
@@ -95,9 +95,8 @@ function Layout({ children }) {
               const isActive = location.pathname === menu.path;
               return (
                 <div
-                  className={`d-flex menu-item ${
-                    isActive && "active-menu-item"
-                  }`}
+                  className={`d-flex menu-item ${isActive && "active-menu-item"
+                    }`}
                 >
                   <i className={menu.icon}></i>
                   {!collapsed && <Link to={menu.path}>{menu.name}</Link>}
