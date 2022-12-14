@@ -48,7 +48,7 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/loginHome"
           element={
             <ProtectedRoute>
               <Home />
@@ -56,7 +56,7 @@ function App() {
           }
         />
         <Route
-          path="/guest"
+          path="/"
           element={
             <PublicRoute>
               <GuestHome />

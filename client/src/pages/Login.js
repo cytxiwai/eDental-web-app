@@ -17,7 +17,7 @@ function Login() {
             if (response.data.success) {
                 toast.success(response.data.message);
                 localStorage.setItem("token", response.data.token);
-                navigate("/");
+                navigate("/loginHome");
             } else {
                 toast.error(response.data.message);
             }
@@ -48,7 +48,7 @@ function Login() {
 
                     <Button
                         className="primary-button my-2 full-width-button">
-                        <Link to="/guest" className="mt-2">
+                        <Link to="/" className="mt-2">
                     GUEST PORTAL</Link></Button>
 
                     <Link to="/register" className="anchor mt-2">

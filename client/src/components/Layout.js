@@ -11,7 +11,7 @@ function Layout({ children }) {
   const userMenu = [
     {
       name: "Home",
-      path: "/",
+      path: "/loginHome",
       icon: "ri-home-4-line",
     },
     {
@@ -28,19 +28,19 @@ function Layout({ children }) {
   const guestMenu = [
       {
         name: "Guest Home",
-        path: "/guest",
+        path: "/",
         icon: "ri-home-4-line",
       },
       {
         name: "Register/Login",
-        path: "/register",
+        path: "/login",
          icon: "ri-key-2-line ",
       }
     ];
   const doctorMenu = [
     {
       name: "Home",
-      path: "/",
+      path: "/loginHome",
       icon: "ri-home-4-line",
     },
     {
@@ -57,7 +57,7 @@ function Layout({ children }) {
   const adminMenu = [
     {
       name: "Home",
-      path: "/",
+      path: "/loginHome",
       icon: "ri-home-line",
     },
     {
