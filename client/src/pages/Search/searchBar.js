@@ -19,7 +19,7 @@ export function SearchBar(props){
         <form onSubmit={Submit}>
             <div class="field has-addons">
                <p className="control">
-                    <div className={`button is-static ${sizeClass}`}>Search</div>
+                    <button className={`button is-static ${sizeClass}`}>Search</button>
                 </p>
                 <p className="control">
                     <input className={`input ${sizeClass} ${[`input-control`]}`}
