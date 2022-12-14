@@ -17,8 +17,10 @@ import BookAppointment from "./pages/BookAppointment";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bulma/css/bulma.css';
 import GuestHome from "./pages/GuestHome";
 import UserProfile from "./pages/userProfile";
+import SearchPage from "./pages/Search/SearchPage.js";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -26,7 +28,7 @@ function App() {
     <BrowserRouter>
       {loading && (
         <div className="spinner-parent">
-          <div class="spinner-border" role="status"></div>
+          <div className="spinner-border" role="status"></div>
         </div>
       )}
       <Toaster position="top-center" reverseOrder={false} />
@@ -60,6 +62,14 @@ function App() {
           element={
             <PublicRoute>
               <GuestHome />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <PublicRoute>
+              <SearchPage/>
             </PublicRoute>
           }
         />

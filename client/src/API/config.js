@@ -1,0 +1,3 @@
+export const API_BASE_URL='https://api.yelp.com/v3';
+
+export const YELPBEARER_TOKEN='LLBJu_b7p56-lgxDTfvupz9tZkpd9ZUkxO0cwOOuWJKbKmDxr3mKXMIxnyAHcPJaA_kXpVimnj0xY_j9lZKK0qlCjoZO728fnswbn7R0_yNc5TupZXy5Y2LsaFeZY3Yx';

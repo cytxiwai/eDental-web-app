@@ -118,7 +118,7 @@ function Layout({ children }) {
         </div>
 
         <div className="content">
-          <div className="header">
+          <div className="header d-flex">
             {collapsed ? (
               <i
                 className="ri-menu-2-fill header-action-icon"
@@ -130,7 +130,11 @@ function Layout({ children }) {
                 onClick={() => setCollapsed(true)}
               ></i>
             )}
+            <div className="d-flex align-items-center px-4">eDental</div>
             <div className="d-flex align-items-center px-4">
+            <button className="primary-button me-2 my-2 full-width-button"
+             onClick={() => navigate("/search")}
+            >Search Dentist</button>
               <Badge
                 count={user?.unseenNotifications.length}
                 onClick={() => navigate("/notifications")}
@@ -141,6 +145,7 @@ function Layout({ children }) {
               <Link className="anchor mx-2" to="/profile">
                 {user?.name}
               </Link>
+
             </div>
           </div>
 

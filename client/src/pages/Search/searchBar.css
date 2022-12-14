@@ -1,0 +1,12 @@
+.input-control{
+min-width: 320px;}
+
+.button{
+height: 40px;
+}
+
+:global(.button).search-button{
+background:  #CCFFFF;
+border: none;
+
+}
