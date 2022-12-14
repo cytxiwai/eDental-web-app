@@ -69,9 +69,7 @@ function App() {
         <Route
           path="/search"
           element={
-            <PublicRoute>
               <SearchPage/>
-            </PublicRoute>
           }
         />
         <Route
@@ -155,14 +153,6 @@ function App() {
           element={
             <ProtectedRoute>
               <Docprofile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="loginSearch"
-          element={
-            <ProtectedRoute>
-              <SearchPage/>
             </ProtectedRoute>
           }
         />

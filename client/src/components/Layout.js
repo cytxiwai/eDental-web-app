@@ -134,6 +134,7 @@ function Layout({ children }) {
             <button className="primary-button me-2 my-2 full-width-button"
                    onClick={() => navigate("/search")}
             >Search Dentist</button>
+
               <Badge
                 count={user?.unseenNotifications.length}
                 onClick={() => navigate("/notifications")}
