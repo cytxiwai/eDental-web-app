@@ -18,4 +18,4 @@ function Docprofile({ doctor }) {
     )
 }
 
-export default Docprofile
+export default Docprofile;

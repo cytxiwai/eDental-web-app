@@ -21,6 +21,7 @@ import 'bulma/css/bulma.css';
 import GuestHome from "./pages/GuestHome";
 import UserProfile from "./pages/userProfile";
 import SearchPage from "./pages/Search/SearchPage.js";
+import Docprofile from "./components/Docprofile.js";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -149,7 +150,24 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/docProfile"
+          element={
+            <ProtectedRoute>
+              <Docprofile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="loginSearch"
+          element={
+            <ProtectedRoute>
+              <SearchPage/>
+            </ProtectedRoute>
+          }
+        />
       </Routes>
+
     </BrowserRouter>
   );
 }

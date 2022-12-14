@@ -8,9 +8,11 @@ import {DetailPage} from './DetailPage.js';
 import {useBusinessSearch} from '../../API/useBusinessSearch.js';
 
 
+
 function SearchPage() {
     const navigate =  useNavigate();
       const location = useLocation();
+
     function search(term, location) {
         const urlEncodedTerm = encodeURI(term);
         const urlEncodedLocation = encodeURI(location);

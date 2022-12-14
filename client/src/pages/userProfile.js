@@ -77,6 +77,9 @@ function UserProfile() {
       <h1 className="page-title">User Profile</h1>
       <hr />
       {currUser && <UserProfileForm onFinish={onFinish} initialValues={currUser} />}
+      <hr/>
+        <button className="primary-button text-black fw-bold me-2 my-2 full-width-button"
+             onClick={() => navigate("/docProfile")}>Looking for other trendy doctors? Please CLICK here! </button>
       <hr />
       <AppointmentsList />
 

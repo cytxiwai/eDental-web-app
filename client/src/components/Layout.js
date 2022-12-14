@@ -132,7 +132,7 @@ function Layout({ children }) {
             <div className="d-flex align-items-center px-4">eDental</div>
             <div className="d-flex align-items-center px-4">
             <button className="primary-button me-2 my-2 full-width-button"
-             onClick={() => navigate("/search")}
+                   onClick={() => navigate("/search")}
             >Search Dentist</button>
               <Badge
                 count={user?.unseenNotifications.length}
