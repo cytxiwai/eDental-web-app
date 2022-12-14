@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import UserProfileForm from "../components/UserProfileForm.js";
 import AppointmentsList from "./AppointmentListWithoutLayout.js";
 
+
 function UserProfile() {
   const { user } = useSelector((state) => state.user);
   const params = useParams();
@@ -58,7 +59,7 @@ function UserProfile() {
       dispatch(hideLoading());
       if (response.data.success) {
         setCurrUser(response.data.data);
-       console.log(currUser);
+        console.log(currUser);
       }
     } catch (error) {
       dispatch(hideLoading());
@@ -67,16 +68,17 @@ function UserProfile() {
 
 
   useEffect(() => {
-    getUserData();},[]);
+    getUserData();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Layout>
       <h1 className="page-title">User Profile</h1>
-        <hr />
-      {currUser && <UserProfileForm onFinish={onFinish} initialValues={currUser}/> }
-
-        <hr />
-        <AppointmentsList/>
+      <hr />
+      {currUser && <UserProfileForm onFinish={onFinish} initialValues={currUser} />}
+      <hr />
+      <AppointmentsList />
 
     </Layout>
   );

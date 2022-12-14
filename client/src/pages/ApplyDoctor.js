@@ -40,7 +40,7 @@ function ApplyDoctor() {
       }
     } catch (error) {
       dispatch(hideLoading());
-      toast.error("Something went wrong when applying for doctor");
+      toast.error("Something went wrong when applying for dentist");
     }
   };
 

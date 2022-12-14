@@ -19,6 +19,7 @@ import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GuestHome from "./pages/GuestHome";
 import UserProfile from "./pages/userProfile";
+import MoreProfile from "./pages/moreProfile";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -136,6 +137,14 @@ function App() {
           element={
             <ProtectedRoute>
               <UserProfile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/doctors-profile"
+          element={
+            <ProtectedRoute>
+              <MoreProfile />
             </ProtectedRoute>
           }
         />
